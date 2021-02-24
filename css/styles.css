@@ -1,0 +1,215 @@
+/* Глобальные стили */
+
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin_cyrillic-regular.woff2') format('woff2'),
+       url('../fonts/montserrat-v15-latin_cyrillic-regular.woff') format('woff'); 
+}
+/* montserrat-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin_cyrillic-600.woff2') format('woff2'),
+       url('../fonts/montserrat-v15-latin_cyrillic-600.woff') format('woff'); 
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin_cyrillic-700.woff2') format('woff2'), 
+       url('../fonts/montserrat-v15-latin_cyrillic-700.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin_cyrillic-800.woff2') format('woff2'),
+       url('../fonts/montserrat-v15-latin_cyrillic-800.woff') format('woff'); 
+}
+
+
+
+/* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ */
+:root {
+	--main-color1: #333;
+	--main-color2: #ff9900;
+	--main-color3: #ffc266; /* Hover */ 
+	--main-color4: #e1670e; /* Active */  
+	--main-color5: #666; /* Hover */
+	--main-color6: #cacaca; /* footer */
+
+}
+
+html {
+	box-sizing: border-box;
+	min-width: 320px;
+}
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+*:hover,
+*:active,
+*:focus {
+	outline: none;
+}
+
+body {
+    min-width: 320px;    
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+		line-height: 2;
+    color: var(--main-color1);
+		background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    /* width: 100%; */
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+input,
+textarea {
+	border: none;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+p,
+button {
+    padding: 0;
+    margin: 0;		
+}
+
+.container {
+    max-width: 1870px;
+		width: 100%;
+    margin: 0 auto;		
+    padding: 0 50px;    
+}
+.flex-container {
+    display: flex;
+}
+.h2 {
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+.h3 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+
+
+/* Кнопки */
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.btn-fill,
+.btn-no-fill {
+	padding: 19px 35px;
+	color: #fff;
+	line-height: 1;
+	font-weight: 700;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.btn-fill {
+	background-color: var(--main-color2);
+	border: 3px solid var(--main-color2);	
+}
+.btn-fill:hover {
+background-color: var(--main-color3);
+border: 3px solid var(--main-color3);
+} 
+.btn-fill:active {
+	background-color: var(--main-color4);
+	border: 3px solid var(--main-color4);
+	}
+.btn-no-fill {
+	background-color: transparent;
+	border: 3px solid var(--main-color2);
+	border: 3px solid var(--main-color2);
+}
+.btn-no-fill:hover {
+	background-color: var(--main-color2);
+	border: 3px solid var(--main-color2);
+}
+.btn-no-fill:active {
+	background-color: var(--main-color4);
+	border: 3px solid var(--main-color4);
+}
+.btn-gray {
+	padding: 21px 37px;
+	color: var(--main-color1);
+	font-weight: 400;
+	line-height: 1;
+	background-color: transparent;
+	border: 1px solid var(--main-color1);
+}
+.btn-gray:hover {
+color: #fff;
+background-color: var(--main-color5);
+}
+.btn-gray:active {
+	color: #fff;
+	background-color: var(--main-color1);
+}
+
+/* Ссылки */
+.a_color {
+	color: var(--main-color1);
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-color: var(--main-color4);
+	-moz-text-decoration-color: var(--main-color4);
+	-moz-text-decoration-line: underline;
+	-moz-text-decoration-style: solid;
+}
+
+
+
+
+
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 1200px) {
+}

@@ -1,0 +1,115 @@
+.header {
+	background-color: #fff;
+	box-shadow:  0 15px 15px 0 rgba(0, 0, 0, .1);
+}
+.header__container {
+	position: relative;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 14px;
+	padding-bottom: 4px;
+}
+#burger-checkbox,
+.burger-icon {
+	display: none;
+}
+.header__logo-img {
+	line-height: 0;
+}
+.nav {
+	display: flex;
+}
+.nav__link {
+	padding-bottom: 4px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+}
+.nav__link:not(:last-child) {
+	margin-right: 85px;
+}
+.nav__link:hover,
+.nav__link:active {
+	border-bottom: 2px solid var(--main-color4); 
+}
+.nav__link:active {
+	color: var(--main-color4);
+}
+.header__search {
+	margin: 0 10px 0 71px;
+}
+.search-icon:hover rect {	 
+		fill: var(--main-color2);	
+}
+.search-icon:hover circle {
+	stroke: var(--main-color2)
+}
+.search-icon:active rect {	 
+	fill: var(--main-color4);	
+}
+.search-icon:active circle {
+stroke: var(--main-color4)
+}
+
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 1200px) {
+	.burger-icon {
+		display: block;
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+		background-repeat: no-repeat;
+		background-size: 60%;
+		background-position: left center;
+		background-image: url('../img/icons/menu-open.svg');
+	}
+	.nav {
+		position: absolute;
+		top: 100px;
+		left: 50px;
+		padding: 30px;
+		flex-direction: column;
+		z-index: 3;
+		background-color:#fff;
+		box-shadow:  15px 15px 15px 0 rgba(0, 0, 0, .3);		
+		transform: translateX(-150%);
+		-webkit-transform: translateX(-150%);
+		-moz-transform: translateX(-150%);
+		-ms-transform: translateX(-150%);
+		-o-transform: translateX(-150%);
+		transition: transform .3s ease-in-out;
+	}
+	.nav__link {
+		/* padding: 30px; */
+	}
+	.nav__link:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.nav__link:active {
+		border: none; 
+	}
+	#burger-checkbox:checked ~ .burger-icon {
+		background-image: url('../img/icons/menu-close.svg');
+	}
+	#burger-checkbox:checked ~ .nav {
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+	}
+	.header__logo-img {
+		max-width: 150px;
+	}	
+	.header__search {
+		margin: 0 0 0 30px;
+	
+	}
+}
