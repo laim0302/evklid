@@ -67,7 +67,7 @@ stroke: var(--main-color4)
 		background-repeat: no-repeat;
 		background-size: 60%;
 		background-position: left center;
-		background-image: url('../img/icons/menu-open.svg');
+		background-image: url('../img/icons/burger-open.svg');
 	}
 	.nav {
 		position: absolute;
@@ -96,7 +96,7 @@ stroke: var(--main-color4)
 		border: none; 
 	}
 	#burger-checkbox:checked ~ .burger-icon {
-		background-image: url('../img/icons/menu-close.svg');
+		background-image: url('../img/icons/burger-close.svg');
 	}
 	#burger-checkbox:checked ~ .nav {
 		transform: none;

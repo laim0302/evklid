@@ -6,12 +6,14 @@
 /* Слайдер */
 .swiper-container {	
   /* width: 1770px; */
-  /* height: 620px; */
+  height: 620px;
 }
 
 .hero__img {
-	height: 620px;
-	object-fit: cover;	
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;	
 }
 .hero__h1,
 .hero__description {
@@ -63,6 +65,7 @@
 }
 .about__img {
 	height: 620px;
+	width: 100%;
 	object-fit: cover;
 }
 .about__caption {
@@ -136,12 +139,12 @@ color: var(--main-color2);
 }
 .how-work__list {
 	display: flex;
-	flex-direction: column;
-	line-height: 0;
+	flex-direction: column;	
 }
 .how-work__item {
 	display: none;
 	justify-content: space-between;
+	height: 465px;	
 }
 .how-work__item_active {
 	display: flex;
@@ -152,10 +155,13 @@ color: var(--main-color2);
 	margin-right: 30px;
 	line-height: 2;
 }
+.how-work__picture {
+	line-height: 0;
+}
 .how-work__img {
 	max-width: 870px;
 	width: 100%;
-	height: 465px;
+	height: 100%;
 	object-fit: cover;	
 }
 .details-btn,
@@ -174,10 +180,7 @@ color: var(--main-color2);
 .faq {
 	margin-bottom: 100px;
 }
-.faq__h2 {
-	padding-bottom: 20px;
-	
-}
+
 .faq__accordion {
 	border-bottom: 1px solid var(--main-color1);
 }
@@ -199,10 +202,6 @@ color: var(--main-color2);
 
 
 
-
-
-
-
 @media screen and (max-width: 1440px) {
 	/* Секция ABOUT */
 	.about__caption {
@@ -211,7 +210,7 @@ color: var(--main-color2);
 	.about__list {
 		max-height: 620px;
 		flex-direction: row;
-		flex-basis: 60%;		
+		max-width: 60%;		
 	}
 	.about__item {		
 		padding: 190px 24px 20px 24px;
@@ -221,9 +220,110 @@ color: var(--main-color2);
 		margin-right: 30px; 
 		margin-bottom: 0px;
 	}
-
 }
 
+
 @media screen and (max-width: 1200px) {
+	/* Секция ABOUT */
+	.about {	
+		margin-bottom: 74px;
+	}
+
+	/* Секция "КАК МЫ РАБОТАЕМ" */
+	.how-work {
+		margin-bottom: 70px;
+	}
+	.how-work__item {
+		height: 689px;
+	} 
+	.how-work__description {
+		max-width: 437px;
+	}
+	.how-work__text {
+		max-height: 570px;
+		overflow: auto;
+		margin-right: 50px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+
+	/* Секция HERO */
+	.hero {
+		margin-bottom: 64px;
+	}
+	.swiper-container {
+		height: 668px;
+	}
+	.hero__img {
+		object-position: center -410px;
+	}
+	.hero__h1,
+	.hero__description {
+		left: 95px;
+		max-width: 712px;
+	}
+	.hero__h1 {	
+		top: 158px;	
+		font-size: 60px;
+	}
+	.hero__description {
+		top: 316px;
+		font-size: 20px;
+	}
+	.hero__btn {
+		left: 95px;
+		bottom: 114px;
+	}
+
+	/* Секция ABOUT */
+	.about__description {	
+		margin-bottom: 58px;
+	}
+	.about__bottom-part {
+		flex-direction: column;
+	}
+	.about__illustration {
+		max-width: 100%;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+	.about__img {
+		height: 640px;
+	}
+	.about__caption {
+		padding: 42px 50px 42px 44px;
+	}
+	.about__list {
+		flex-direction: column;
+		max-width: 100%;
+	}
+	.about__item {
+		padding: 62px 120px 62px 349px;
+		background-position: 112px center;
+	}
+	.about__item:not(:last-child) {
+		margin-right: 0; 
+			margin-bottom: 40px;
+	}
+
+	/* Секция "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" */
+	.faq {
+		margin-bottom: 50px;
+	}
+	.faq__h2 {
+		padding-bottom: 10px;
+		
+	}
+	.faq__h3 {
+		padding: 36px 160px 36px 0;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+
+
+
 
 }

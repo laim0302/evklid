@@ -80,3 +80,19 @@ margin-right: 25px;
 	width: 100%;
 	margin-top: 80px;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+	.footer__right-part {
+		display: none;
+	}
+	.footer__central-part {
+		max-width: 534px;
+		margin-right: 0;
+	}
+	.footer__btn {
+		margin-right: 15px;
+		padding: 20px 35px;
+	}
+}
