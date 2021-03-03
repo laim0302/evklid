@@ -1,54 +1,50 @@
 /* Секция HERO */
 .hero {
 	position: relative;
-	margin-bottom: 98px;
+	margin-bottom: 104px;
 }
 /* Слайдер */
-.swiper-container {	
-  /* width: 1770px; */
+.swiper-container {
   height: 620px;
 }
-
 .hero__img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 	object-position: center;	
 }
-.hero__h1,
-.hero__description {
-	position: absolute;	
-	z-index: 2;
+.hero__text-part {
+	position: absolute;
+	top: 103px;
 	left: 128px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	max-width: 840px;
-	color: #fff;		
+	color: #fff;
+	z-index: 2;
 }
 .hero__h1 {	
-	top: 103px;	
+	margin-bottom: 18px;
 	font-size: 70px;
 	font-weight: 800;	
 	line-height: 1.25;
 }
 .hero__description {
-	color: #fff;
-	top: 294px;
-	font-size: 23px;
+	margin-bottom: 100px;
+	font-size: 24px;
 	font-weight: 700;
 	line-height: 1.25;	
 }
 .hero__btn {
-	position: absolute;	
-	z-index: 2;
-	left: 128px;
-	bottom: 100px;
-	padding: 25px 36px;
+	padding: 25px 35px;
 	font-size: 24px;
 }
 
-
-/* Секция ABOUT */
+/* Секция О НАС */
 .about {	
-	margin-bottom: 98px;
+	/* display: none; */
+	margin-bottom: 110px;
 }
 .about__description {
 	max-width: 1235px;
@@ -58,28 +54,30 @@
 	display: flex;
 	justify-content: space-between;
 }
-.about__illustration {
-	position: relative;	
+.about__illustration {	
+	position: relative;
 	max-width: 49%;
 	margin-right: 30px;
+	line-height: 0;
 }
 .about__img {
-	height: 620px;
+	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }
 .about__caption {
 	position: absolute;
 	left: 0;
-	bottom: 10px;
+	bottom: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 	width: 100%;
 	padding: 42px 66px 42px 54px;
 	color: #fff;
 	font-weight: 700;
+	line-height: 2;
 	background-color: rgba(0, 0, 0, .5);
 }
 .about__caption-p {
@@ -112,6 +110,7 @@ margin-top: 20px;
 
 /* Секция "КАК МЫ РАБОТАЕМ" */
 .how-work {
+	/* display: none; */
 	margin-bottom: 120px;
 }
 .how-work__h2 {
@@ -178,9 +177,9 @@ color: var(--main-color2);
 
 /* Секция "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" */
 .faq {
+	/* display: none; */
 	margin-bottom: 100px;
 }
-
 .faq__accordion {
 	border-bottom: 1px solid var(--main-color1);
 }
@@ -202,13 +201,14 @@ color: var(--main-color2);
 
 
 
+/* МЕДИА-ЗАПРОСЫ */
+
 @media screen and (max-width: 1440px) {
-	/* Секция ABOUT */
+	/* Секция О НАС */
 	.about__caption {
 		padding: 24px;
 	}
 	.about__list {
-		max-height: 620px;
 		flex-direction: row;
 		max-width: 60%;		
 	}
@@ -222,61 +222,33 @@ color: var(--main-color2);
 	}
 }
 
-
 @media screen and (max-width: 1200px) {
-	/* Секция ABOUT */
-	.about {	
-		margin-bottom: 74px;
-	}
-
-	/* Секция "КАК МЫ РАБОТАЕМ" */
-	.how-work {
-		margin-bottom: 70px;
-	}
-	.how-work__item {
-		height: 689px;
-	} 
-	.how-work__description {
-		max-width: 437px;
-	}
-	.how-work__text {
-		max-height: 570px;
-		overflow: auto;
-		margin-right: 50px;
-	}
-}
-
-@media screen and (max-width: 1024px) {
-
 	/* Секция HERO */
 	.hero {
-		margin-bottom: 64px;
+		margin-bottom: 68px;
 	}
 	.swiper-container {
-		height: 668px;
+		max-height: 668px;
 	}
-	.hero__img {
-		object-position: center -410px;
-	}
-	.hero__h1,
-	.hero__description {
+	.hero__text-part {
+		top: 160px;
 		left: 95px;
-		max-width: 712px;
+		max-width: 710px;
 	}
-	.hero__h1 {	
-		top: 158px;	
+	.hero__h1 {		
+		margin-bottom: 10px;
 		font-size: 60px;
 	}
 	.hero__description {
-		top: 316px;
 		font-size: 20px;
 	}
-	.hero__btn {
-		left: 95px;
-		bottom: 114px;
+	.hero__btn {		
+		bottom: 120px;
 	}
-
-	/* Секция ABOUT */
+	/* Секция О НАС */
+	.about {	
+		margin-bottom: 74px;
+	}
 	.about__description {	
 		margin-bottom: 58px;
 	}
@@ -307,23 +279,301 @@ color: var(--main-color2);
 		margin-right: 0; 
 			margin-bottom: 40px;
 	}
+	.about__btn {
+		margin-top: 0;
+	}
+	/* Секция "КАК МЫ РАБОТАЕМ" */
+	.how-work {
+		margin-bottom: 70px;
+	}
+	.how-work__item {
+		height: 689px;
+	} 
+	.how-work__description {
+		max-width: 437px;
+	}
+	.how-work__text {
+		max-height: 570px;
+		overflow: auto;
+		margin-right: 50px;
+	}
+	/* Секция "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" */
+	.faq__h3 {
+				font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	/* Секция HERO */
+	.hero {
+		margin-bottom: 64px;
+		padding: 0;
+	}
+	.swiper-container {
+		max-height: 699px;
+	}	
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+	}
+	.hero__text-part {
+		left: 50px;
+		top: 190px;
+	}	
+	/* Секция О НАС */
+	.about {
+		margin-bottom: 60px;
+	}
+	.about__caption {
+		flex-wrap: nowrap;
+		padding: 26px 27px;
+	}
+	.about__caption-p {
+		margin-right: 33px;
+	}
+	.about__img {
+		height: 650px;
+	}
+	.about__item {
+		padding: 33px 30px 35px 175px;
+		background-size: 120px 100px;
+		background-position: 31px center;
+	}
+	/* Секция "КАК МЫ РАБОТАЕМ" */
+	.how-work__list {
+		margin-bottom: 30px;
+	}
+	.how-work__btn-list {
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+	.how-work__btn-item:not(:last-child) {
+		margin-right: 0;
+	}
+	.how-work__item {
+		flex-direction: column-reverse;
+		height: 100%;
+	}
+	.how-work__picture {
+		margin-bottom: 40px;
+	}
+	.how-work__img {
+		max-height: 284px;
+	}
+	.how-work__description {
+		max-width: 100%;
+		margin-right: 0;
+	}
+	.how-work__text {
+		max-height: 100%;
+		margin-right: 0;
+	}
+	.details-btn,
+	.contract-btn {
+		position: static;
+	}
+	.details-btn {
+		margin-right: 30px;
+	}
+	/* Секция "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" */
+	.faq {
+		margin-bottom: 55px;
+	}
+	.faq__h3 {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+	.faq__content {
+		padding-bottom: 20px;
+	}		
+}
+
+@media screen and (max-width: 767px) {
+	/* Секция HERO */
+	.swiper-container {
+		max-height: 500px;
+	}
+	.hero__text-part {
+		top: 150px;
+		left: 30px;
+		max-width: 375px;
+	}
+	.hero__h1 {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.hero__description {
+		margin-bottom: 70px;
+		font-size: 18px;
+	}
+	.hero__btn {
+		padding: 14px 28px;
+		font-size: 18px;
+	}
+	/* Секция О НАС */
+	.about__description {
+		margin-bottom: 48px;
+	}
+	.about__illustration {
+		margin-bottom: 24px;
+	}
+	.about__img {
+		max-height: 500px;
+	}
+	.about__caption {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 24px;
+	}
+	.about__caption-p {
+		max-width: none;
+		margin-right: 0;	
+		margin-bottom: 20px;
+	}
+	.about__item {
+		padding: 90px 24px 24px 24px;
+		background-position: 15px 15px;
+		background-size: 80px;
+	}
+	.about__item:not(:last-child) {
+		margin-bottom: 24px;
+	}
+
+	/* Секция "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" */
+	.faq__h3 {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	/* Секция HERO */
+	.hero {		
+		padding: 0 15px;
+		margin-bottom: 39px;
+	}
+	.swiper-container {
+		max-height: 262px;
+	}
+	.swiper-pagination {
+		display: none;
+	}
+	.hero__text-part {
+		left: 40px;
+		right: 40px;
+		top: 32px;
+		align-items: center;
+		text-align: center;
+	}
+	.hero__h1 {
+		margin-bottom: 6px;
+		font-size: 20px;
+		line-height: 1.25;		
+	}
+	.hero__description {
+		margin-bottom: 34px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1.25;
+	}
+	.hero__btn {
+		padding: 11px 26px;
+		font-size: 12px;
+	}
+
+	/* Секция О НАС */
+	.about {
+		margin-bottom: 50px;
+	}
+	.about__description {
+		margin-bottom: 10px;
+	}
+	.about__illustration {
+		margin-bottom: 10px;
+	}
+	.about__img {
+		width: 100%;
+		height: auto;
+		min-height: 200px;
+		margin-bottom: 10px;
+	}
+	.about__caption  {
+		position: relative;
+		margin-bottom: 10px;
+		padding: 0;
+		font-weight: 400;
+		color: var(--main-color1);
+		background-color: transparent;
+	}
+	.about__caption-p {
+		margin-bottom: 10px;
+	}
+	.about__btn {
+		padding: 11px 35px;
+		color: var(--main-color2);
+		border-width: 2px;
+	}
+	.about__item {		
+		border: none;
+		padding: 80px 0 0 0;
+		background-position: 0 15px;
+		background-size: 64px;
+	}
+	.about__item:not(:last-child)	{
+		margin-bottom: 8px;
+	}
+
+	/* Секция "КАК МЫ РАБОТАЕМ" */
+	.how-work {
+		margin-bottom: 40px;
+	}
+	.how-work__h2 {
+		margin-bottom: 15px;
+	}
+	.how-work__btn-list {
+		margin-bottom: 4px;
+	}
+	.how-work__btn-item {
+		font-size: 14px;
+	}
+	.how-work__list {
+		margin-bottom: 20px;
+	}
+	.how-work__picture {
+		margin-bottom: 10px;
+	}
+	.how-work__img {
+		width: 100%;
+		height: 160px;
+	}
+	.details-btn {
+		margin-right: 10px;
+		padding: 10px 34px;
+	}
+	.contract-btn {
+		padding: 12px 25px;
+	}
 
 	/* Секция "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ" */
 	.faq {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	}
 	.faq__h2 {
-		padding-bottom: 10px;
-		
+		margin-bottom: 12px;
 	}
 	.faq__h3 {
-		padding: 36px 160px 36px 0;
-		font-size: 20px;
-		line-height: 1.6;
+		margin: 0;
+		padding: 32px 60px 31px 0;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.7;
+		background-size: 30px 30px;
 	}
+	.faq__content {
+		/* padding-bottom: 10px; */
+	}	
+		
 
-
-
-
+	
 
 }
+
