@@ -76,6 +76,48 @@
 .footer__label_checkbox {
 	line-height: 1.3;
 }
+/* Стилизация чек-бокса */
+.footer__label_checkbox {
+	position: relative;
+	padding-left: 20px;
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+#check + span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	/* vertical-align: top; */
+	border: 2px solid var(--main-color6);
+}
+#check + span::before {
+	content:'\2713';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #97ee3f;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-ms-transition: opacity .3s ease-in-out;
+	-o-transition: opacity .3s ease-in-out;
+}
+#check:checked + span::before {
+opacity: 1;
+}
+
 /* Правая часть FOOTER */
 .footer__right-part {
 	max-width: 363px;

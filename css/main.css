@@ -50,6 +50,47 @@
 	max-width: 1235px;
 	margin-bottom: 48px;
 }
+
+/* Tolltip */
+.tooltip {
+position: relative;
+}
+.tooltip__svg {
+	fill: none;
+
+	cursor: pointer;
+}
+.tooltip__svg_path {
+	fill: var(--main-color5);
+	
+}
+.tooltip__svg:hover .tooltip__svg_path {
+	fill: var(--main-color2);
+}
+.popup {
+	position: absolute;
+	bottom: 150%;
+	left: 0;
+	/* max-width: 500px; */
+	width: 200px;
+	padding: 6px;
+	color: red;
+	font-size: 14px;
+	background: var(--main-color5);
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
+.popup::before {
+	/* content: ''; */
+	/* width: 500%; */
+}
+
+.tooltip__svg:hover ~ .popup,
+.tooltip__svg:focus ~ .popup {
+	opacity: 1;
+}
+/* ------------------------------------------ */
+
 .about__bottom-part {
 	display: flex;
 	justify-content: space-between;
@@ -193,6 +234,10 @@ color: var(--main-color2);
 }
 .faq__h3:hover {
 	color: var(--main-color2);
+}
+.faq__h3:active,
+.faq__h3:focus {	
+	background-image: url('../img/icons/faq-x.svg');
 }
 .faq__content {
 	padding-bottom: 20px;

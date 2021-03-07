@@ -9,13 +9,50 @@ window.addEventListener('DOMContentLoaded', function () {
 			})
 			document.querySelector(`[data-target="${path}"]`).classList.add('how-work__item_active')
 		})
-	})
-
-});
-
-// Аккордеон
-$(function () {
-	$("#accordion").accordion({
-		collapsible: true
 	});
+
+	// Аккордеон
+
+
+	$(function () {
+		$("#accordion").accordion({
+			collapsible: true
+		});
+		// $("#accordion").accordion("refresh");
+	});
+
+
+	// Валидация формы в футере
+	new JustValidate('.footer__form', {
+		rules: {
+			name: {
+				required: true,
+				minLength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			name: ' ',
+			email: ' '
+		},
+	});
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+
+
+
