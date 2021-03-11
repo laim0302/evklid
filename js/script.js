@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	$(function () {
 		$("#accordion").accordion({
-			collapsible: true
+			collapsible: true,
+			heightStyle: 'content'
 		});
 		// $("#accordion").accordion("refresh");
 	});
@@ -40,19 +41,16 @@ window.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
+	// Tooltip
+	const button = document.querySelector('#tooltip__btn');
+	const tooltip = document.querySelector('#tooltip');
 
-
-
-
-
-
-
+	// Pass the button, the tooltip, and some options, and Popper will do the
+	// magic positioning for you:
+	Popper.createPopper(button, tooltip, {
+		placement: 'top',
+	});
 
 
 
 });
-
-
-
-
-

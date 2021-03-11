@@ -52,12 +52,17 @@
 }
 
 /* Tolltip */
-.tooltip {
-position: relative;
+#tooltip {
+	max-width: 170px;
+	background-color: var(--main-color1);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-size: 13px;
+	opacity: 0;
 }
 .tooltip__svg {
 	fill: none;
-
 	cursor: pointer;
 }
 .tooltip__svg_path {
@@ -67,28 +72,34 @@ position: relative;
 .tooltip__svg:hover .tooltip__svg_path {
 	fill: var(--main-color2);
 }
-.popup {
-	position: absolute;
-	bottom: 150%;
-	left: 0;
-	/* max-width: 500px; */
-	width: 200px;
-	padding: 6px;
-	color: red;
-	font-size: 14px;
-	background: var(--main-color5);
-	opacity: 0;
-	transition: opacity .3s ease-in-out;
-}
-.popup::before {
-	/* content: ''; */
-	/* width: 500%; */
-}
 
-.tooltip__svg:hover ~ .popup,
-.tooltip__svg:focus ~ .popup {
+#tooltip__btn:hover + #tooltip,
+#tooltip__btn:focus + #tooltip {
 	opacity: 1;
 }
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
 /* ------------------------------------------ */
 
 .about__bottom-part {
@@ -235,8 +246,7 @@ color: var(--main-color2);
 .faq__h3:hover {
 	color: var(--main-color2);
 }
-.faq__h3:active,
-.faq__h3:focus {	
+.ui-accordion-header-active {
 	background-image: url('../img/icons/faq-x.svg');
 }
 .faq__content {
